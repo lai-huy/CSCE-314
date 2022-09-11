@@ -1,0 +1,20 @@
+(define (countEven L)
+  (cond
+   ((null? L) 0)
+   ((equal? (modulo (car L) 2) 0) (+ 1 (countEven (cdr L))))
+   (else (countEven (cdr L)))
+   )
+)
+
+(define (main)
+  (display (countEven '()))
+  (display "\n")
+  (display (countEven '(1)))
+  (display "\n")
+  (display (countEven '(2)))
+  (display "\n")
+  (display (countEven '(1 2 3 4 5)))
+)
+
+(main)
+(exit)
