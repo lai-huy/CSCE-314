@@ -1,29 +1,33 @@
 #lang racket
-(define(palindrome? list1)
-  (cond
-    ; check if list has 0 or 1 elements
-    ((null? list1) #t)
-    ((null? (cdr list1)) #t)
+(define (reverse l)
+	(if (null? l)
+		'()
+		(append (reverse (cdr l)) (list (car l)))
+	)
+)
 
-    ;case car atom equals '-' and reverse car atom equals '-'
-    (((and (equal? (car list1) #-) (equal? (car(reverse(list1))) #-)))
-     ((equal? (caar list1) (caar(reverse(list1)))))
-     (palindrome? (cddr(reverse(cddr list1)))) #f)
-    ;case car atom equals '-' and reverse car atom does not equal '-'
-    ((equal? (car list1) #-)
-     (equal? (caar list1) (car(reverse(list1)))
-      (palindrome? (cdr(reverse(cddr list1))))) #f)
-    ;case car atom doesnt equal '-' and reverse car atom equals '-'
-    ((equal? (car (reverse (list1))) #-)
-     (equal? (car list1) (caar(reverse(list1)))
-      (palindrome? (cddr(reverse(cdr list1))))) #f)
-    ;case car atom doesnt equal '-' and reverse car atom doesnt equal '-'
-    ((equal? (car(list1)) (car(reverse(list1))))
-     (palindrome? (cdr(reverse(cdr list1)))) #f)
-    )
-  )
+(define (alpha list)
+	(filter char-alphabetic? list)
+)
+
+(define (equallist? list1 list2)
+	(cond
+		((and (empty? list1) (empty? list2)) #t)
+		((char=? (car list1) (car list2)) (equallist? (cdr list1) (cdr list2)))
+		(else #f)
+	)
+)
+
+(define (palindrome? list)
+	(define l (alpha list))
+	(define r (reverse l))
+	(equallist? l r)
+)
 
 
 
-(display (palindrome? '(m a d a m - i m - a d a m)))
+(display (palindrome? '(#\m #\a #\d #\a #\m #\- #\i #\m #\- #\a #\d #\a #\m)))
+(newline)
+(display (palindrome? '(#\w #\a #\s #\- #\t #\h #\a #\t #\- #\a #\- #\r #\a #\t #\- #\i #\- #\s #\a #\w)))
+(newline)
 (exit)

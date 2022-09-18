@@ -1,10 +1,14 @@
 #lang racket
-(define (depth-replicate list1)
-  (cond
-    ((null? list1) '())
-     (else (cons car list1) depth-replicate(cdr list1))
-    )
-  )
+(define (makelist element size)
+	size
+)
 
-(display (depth-replicate '( ( ( 5 ) 1 )  2 ) ) )
+(define (depth-replicate l)
+	(cond
+		((empty? l) '())
+		(else l)
+	)
+)
+
+(display (depth-replicate '(((5) 1) 2))) ;out: '(5 5 5 1 1 2)
 (display "\n")
