@@ -97,15 +97,15 @@
                     (cities '(cairns (port douglas))))))
         (make-node 'honduras (cities '(tegucigalpa))))))
 
-(define (replace city1 city2 tree)
-    (if (equal? (datum tree) city1)
-        (list-set tree 0 city2)
-        (if (not (leaf? tree))
-            ((replace city1 city2 (children tree)))
-            (make-node city2 '())
-        )
+(define (find-replace city1 city2 list)
+    (cond
+        ((null? list) '())
+        ((list? (car list)) (cons (find-replace city1 city2 (car list)) (find-replace city1 city2 (cdr list))))
+        ((eq? (car list) city1) (cons city2 (find-replace city1 city2 (cdr list))))
+        (else
+        (cons (car list) (find-replace city1 city2 (cdr list))))
     )
 )
 
-(display (replace 'italy 'hello world-tree2))
+(display (find-replace 'italy 'hello world-tree2))
 (newline)
