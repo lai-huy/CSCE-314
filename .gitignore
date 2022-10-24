@@ -4,3 +4,7 @@ Midterm/
 *~
 *.bak
 JFLAP*.jar
+/.metadata/
+/.settings/
+.classpath
+.project
