@@ -1,0 +1,4 @@
+Drink, Coca-Cola, 120, 16, soda, 2
+Drink, Coca-Cola, 120, 16, soda, 4
+Drink, Coca-Cola, 120, 16, soda, 1
+Snack, Chips, 220, 4, false, 8

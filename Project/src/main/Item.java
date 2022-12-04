@@ -6,9 +6,13 @@ public class Item {
     protected String itemType;
     
     public Item() {
-        this.name = new String();
-        this.calories = 0f;
-        this.itemType = new String();
+        this(new String(), 0f, new String());
+    }
+    
+    public Item(final String name, final float cal, final String type) {
+        this.name = name;
+        this.calories = cal;
+        this.itemType = type;
     }
     
     public void setName(final String name) {

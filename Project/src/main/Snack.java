@@ -5,9 +5,13 @@ public class Snack extends Item {
     private boolean containsNuts;
 
     public Snack() {
-        super();
-        this.weight = 0f;
-        this.containsNuts = false;
+        this(new String(), 0f, new String(), 0f, false);
+    }
+
+    public Snack(final String name, final float cal, final String itemType, final float weight, final boolean nuts) {
+        super(name, cal, itemType);
+        this.weight = weight;
+        this.containsNuts = nuts;
     }
 
     public void setWeight(float weight) {
