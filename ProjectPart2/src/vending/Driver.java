@@ -1,31 +1,11 @@
-package application;
-	
+package vending;
+
 import java.util.ArrayList;
 
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
-import vending.DataFile;
-import vending.Vending;
+public class Driver {
 
-
-public class Main extends Application {
-	@Override
-	public void start(Stage primaryStage) {
-		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
         // load data from file
         DataFile myData = new DataFile("./Directory/directory1.txt", "./Input/input.txt");
 
@@ -51,7 +31,7 @@ public class Main extends Application {
         // done with a helper function that USES the toString()
         // We will NOT call DisplayItems() in testing
         /*****************/
-        
-		launch(args);
-	}
+
+    }
+
 }
