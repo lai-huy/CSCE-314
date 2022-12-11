@@ -8,9 +8,16 @@ import java.util.ArrayList;
 
 public class DataFile {
 	protected final File dir_file;
+	protected final File input_file;
 
 	public DataFile(final File dir) {
 		this.dir_file = dir;
+		this.input_file = new File("./Input/input.txt");
+	}
+
+	public DataFile(final String dir, final String input) {
+		this.dir_file = new File(dir);
+		this.input_file = new File(input);
 	}
 
 	public ArrayList<String> loadDirectory() {
@@ -28,7 +35,26 @@ public class DataFile {
 		return lines;
 	}
 
+	public ArrayList<Integer> loadSampleInput() {
+		if (!this.input_file.exists())
+			return null;
+		ArrayList<Integer> lines = new ArrayList<>();
+		try (BufferedReader reader = new BufferedReader(new FileReader(this.input_file))) {
+			String line;
+			while ((line = reader.readLine()) != null)
+				lines.add(Integer.parseInt(line));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return lines;
+	}
+
 	public String getDirectory() {
 		return this.dir_file.getPath();
+	}
+
+	public String getSelections() {
+		return this.input_file.getPath();
 	}
 }

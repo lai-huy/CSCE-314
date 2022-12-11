@@ -3,9 +3,8 @@ run: build
 
 build: clean
 	find -name "*.java" > sources.txt
-	javac -d bin @sources.txt
+	javac -source 11 -target 11 -d bin @sources.txt
 
 clean:
-	rm -rf "bin"
+	rm -rf bin/
 	rm -rf "sources.txt"
-	mkdir "./bin/"

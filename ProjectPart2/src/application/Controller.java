@@ -175,6 +175,11 @@ public class Controller {
 
 	@FXML
 	private void reset(MouseEvent event) {
+		if (this.df == null) {
+			System.out.println("Data File not selected");
+			return;
+		}
+
 		this.machine = new Vending(this.df.loadDirectory());
 		this.updateButtons();
 		this.updateLabels();
