@@ -10,12 +10,13 @@ public class Vending {
 
 	public Vending(final ArrayList<String> contents) {
 		this.slots = new ArrayList<>(contents.size());
+		for (int i = 0; i < 8; ++i)
+			this.slots.add(new LinkedList<>());
 		this.loadItem(contents);
 	}
 
 	public void loadItem(final ArrayList<String> contents) {
 		for (int i = 0; i < contents.size(); ++i) {
-			this.slots.add(new LinkedList<>());
 			String[] data = contents.get(i).split(",\\s");
 			Item item = "Drink".equals(data[0])
 					? new Drink(data[1], Float.parseFloat(data[2]), data[0], Float.parseFloat(data[3]), data[4])
@@ -40,7 +41,7 @@ public class Vending {
 				j = i.intValue();
 			}
 		}
-		
+
 		this.slots.get(j).poll();
 	}
 
@@ -51,9 +52,13 @@ public class Vending {
 
 	public ArrayList<Integer> findProduct(final String product) {
 		ArrayList<Integer> index = new ArrayList<>();
-		for (int i = 0; i < this.slots.size(); ++i)
-			if (this.slots.get(i).peek().getName().equals(product))
+		for (int i = 0; i < this.slots.size(); ++i) {
+			final Queue<Item> slot = this.slots.get(i);
+			if (slot.isEmpty())
+				continue;
+			if (slot.peek().getName().equals(product))
 				index.add(Integer.valueOf(i));
+		}
 		return index;
 	}
 
@@ -80,5 +85,24 @@ public class Vending {
 		}
 
 		return str.toString();
+	}
+
+	public int[] getQuantity() {
+		int[] quant = new int[8];
+		for (int i = 0; i < quant.length; ++i) {
+			if (i > this.slots.size())
+				quant[i] = 0;
+			quant[i] = this.slots.get(i).size();
+		}
+
+		return quant;
+	}
+
+	public String getItemInSlot(int index) {
+		if (index > this.slots.size())
+			return "Empty";
+		else if (this.slots.get(index).isEmpty())
+			return "Empty";
+		return this.slots.get(index).peek().getName();
 	}
 }
