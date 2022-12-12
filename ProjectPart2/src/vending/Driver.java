@@ -1,15 +1,13 @@
 package vending;
 
 import java.util.ArrayList;
-import vending.DataFile;
-import vending.Vending;
 
 public class Driver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// load data from file
-		DataFile myData = new DataFile("./Directory/directory1.txt", "./Input/input.txt");
+		DataFile myData = new DataFile("./Directory/directory1.txt", "./Input/input1.txt");
 
 		// initialize Vending machine with loaded data
 		ArrayList<String> myVending = myData.loadDirectory();
