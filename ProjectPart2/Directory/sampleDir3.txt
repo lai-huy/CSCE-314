@@ -1,0 +1,8 @@
+Snack, Chips Ahoy, 220, 4, false, 2
+Snack, Ruffles, 220, 4, false, 5
+Snack, Chips Ahoy, 220, 4, false, 7
+Snack, Poker Chips, 220, 4, false, 500
+Snack, Cheetos, 220, 4, false, 4
+Snack, Chocolate Chips, 220, 4, false, 2
+Snack, Frito-Lay, 220, 4, false, 6
+Snack, Doritos, 220, 4, false, 7

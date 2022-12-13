@@ -1,0 +1,8 @@
+Drink, Coca-Cola, 120, 16, soda, 9
+Drink, Pepsi, 120, 16, soda, 69
+Drink, Coca-Cola, 120, 16, soda, 4
+Drink, Pepsi, 120, 16, soda, 520
+Drink, Coca-Cola, 120, 16, soda, 10
+Drink, Pepsi, 120, 16, soda, 11
+Drink, Coca-Cola, 120, 16, soda, 8
+Drink, Pepsi, 120, 16, soda, 4

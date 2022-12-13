@@ -1,0 +1,80 @@
+Coca-Cola: (soda): 1
+Coca-Cola: (soda): 2
+Coca-Cola: (soda): 1
+Chips: (Snack): 8
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+
+Coca-Cola: (soda): 9
+Coca-Cola: (soda): 6
+Coca-Cola: (soda): 4
+Coca-Cola: (soda): 5
+Coca-Cola: (soda): 10
+Coca-Cola: (soda): 11
+Coca-Cola: (soda): 8
+Coca-Cola: (soda): 4
+
+Coca-Cola: (soda): 5
+Coca-Cola: (soda): 5
+Coca-Cola: (soda): 4
+Coca-Cola: (soda): 5
+Coca-Cola: (soda): 5
+Coca-Cola: (soda): 5
+Coca-Cola: (soda): 5
+Coca-Cola: (soda): 4
+
+Coca-Cola: (soda): 9
+RC-Cola: (soda): 6
+Diet Coca-Cola: (soda): 4
+Coca-Cola Zero Sugar: (soda): 5
+Frozen Coke® Classic: (soda): 10
+Frozen Coke® No Sugar: (soda): 11
+Coca Colla: (soda): 8
+Pepsi-Cola: (soda): 4
+
+Coca-Cola: (soda): 7
+RC-Cola: (soda): 5
+Diet Coca-Cola: (soda): 1
+Coca-Cola Zero Sugar: (soda): 2
+Frozen Coke® Classic: (soda): 5
+Frozen Coke® No Sugar: (soda): 7
+Coca Colla: (soda): 7
+Pepsi-Cola: (soda): 2
+
+Chips Ahoy: (Snack): 8
+Frito-Lay: (Snack): 6
+Doritos: (Snack): 7
+Cheetos: (Snack): 4
+Ruffles: (Snack): 5
+Chips Ahoy: (Snack): 7
+Chocolate Chips: (Snack): 2
+Poker Chips: (Snack): 9
+
+Chips Ahoy: (Snack): 5
+Frito-Lay: (Snack): 4
+Doritos: (Snack): 4
+Cheetos: (Snack): 1
+Ruffles: (Snack): 2
+Chips Ahoy: (Snack): 5
+This spot is empty
+Poker Chips: (Snack): 7
+
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty
+This spot is empty

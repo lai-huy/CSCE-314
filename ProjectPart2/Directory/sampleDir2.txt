@@ -1,0 +1,8 @@
+Drink, Coca-Cola, 120, 16, soda, 5
+Drink, RC-Cola, 120, 16, soda, 6
+Drink, Diet Coca-Cola, 120, 16, soda, 4
+Drink, Coca-Cola Zero Sugar, 120, 16, soda, 5
+Drink, Frozen Coke® Classic, 120, 16, soda, 5
+Drink, Frozen Coke® No Sugar, 120, 16, soda, 6
+Drink, Coca Colla, 120, 16, soda, 4
+Drink, Pepsi-Cola, 120, 16, soda, 14
